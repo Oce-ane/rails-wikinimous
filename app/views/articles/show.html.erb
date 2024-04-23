@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <article>
+      <h1>
+      <%= @article.title %>
+        <small>
+          <%= link_to edit_article_path(@article) do %>
+            <i class="fa fa-pencil"></i>
+          <% end %>
+          <%= link_to article_path(@article),
+          data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %>
+            <i class="fa-solid fa-trash"></i>
+          <% end %>
+          </a>
+        </small>
+      </h1>
+          <hr>
+          <p> <%= @article.content.lines('.').first %></p>
+        <h2><%= @article.content.split(/\.\s+/).second %></h2>
+          <p><%= @article.content.split(/\.\s+/).third%></p>
+        <h2><%= @article.content.split(/\.\s+/).fourth %></h2>
+          <p><%= @article.content.split(/\.\s+/).last %></p>
+    </article>
+  </div>
+</div>

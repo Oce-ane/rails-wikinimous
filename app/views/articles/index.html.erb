@@ -1,0 +1,10 @@
+<div class="container">
+<div class="container" style="width:70%">
+  <% @articles.each do |article| %>
+    <article>
+      <h2><%= link_to article.title, article_path(article) %></h2>
+      <%= article.content.lines('.').first %>
+    </article>
+  <% end %>
+</div>
+</div>

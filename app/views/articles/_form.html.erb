@@ -1,0 +1,15 @@
+<div class="d-flex flex-column">
+<%= form_with model: @article do |f| %>
+<div class="mb-3">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</div>
+<div class="mb-3">
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+</div>
+<div class="p-2">
+  <%= f.submit %>
+</div>
+<% end %>
+</div>
